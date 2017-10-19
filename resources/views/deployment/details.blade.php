@@ -45,8 +45,8 @@
 
 @push('javascript')
     <script type="text/javascript">
-        new app.views.Deployment();
-        app.collections.Deployment.add({!! $output !!});
+        new app.views.Logs();
+        app.collections.Logs.add({!! $output !!});
 
         app.setProjectId({{ $project->id }});
     </script>
