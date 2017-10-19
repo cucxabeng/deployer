@@ -45,10 +45,10 @@
 
 @push('javascript')
     <script type="text/javascript">
-        new app.DeploymentView();
-        app.Deployment.add({!! $output !!});
+        new app.views.Deployment();
+        app.collections.Deployment.add({!! $output !!});
 
-        app.project_id = {{ $deployment->project_id }};
+        app.setProjectId({{ $project->id }});
     </script>
 @endpush
 
