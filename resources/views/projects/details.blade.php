@@ -114,6 +114,7 @@
 @push('javascript')
     <script type="text/javascript">
         app.views.Project();
+
         new app.views.Servers();
         new app.views.Variables();
         new app.views.SharedFiles();

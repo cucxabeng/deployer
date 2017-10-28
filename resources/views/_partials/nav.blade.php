@@ -29,7 +29,7 @@
                     </ul>
                 </li>
 
-                <li class="dropdown messages-menu" id="deploying_menu">
+                <li class="dropdown messages-menu" id="running_menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-spinner"></i>
                         <span class="label label-warning">{{ $deploying_count }}</span>

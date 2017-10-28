@@ -54,7 +54,7 @@
                         <label>{{ trans('servers.options') }}</label>
                         <div class="checkbox">
                             <label for="server_deploy_code">
-                                <input type="checkbox" value="1" name="deploy_code" id="server_deploy_code" />
+                                <input type="checkbox" value="1" name="deploy_code" id="server_deploy_code" checked />
                                 {{ trans('servers.deploy_code') }}
                             </label>
                         </div>

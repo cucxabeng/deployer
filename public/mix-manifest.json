@@ -1,10 +1,19 @@
 {
+<<<<<<< HEAD
     "/js/vendor.js": "/js/vendor.js?id=c4aac265c1206ebbb2b1",
     "/js/app.js": "/js/app.js?id=799b8a1fdeaaf260d75b",
     "/js/manifest.js": "/js/manifest.js?id=88690f30ff73c822037a",
     "/js/ie.js": "/js/ie.js?id=f7a78deadcb6f066abd5",
     "/css/app.css": "/css/app.css?id=007ebc2ac4fb95f392ef",
     "/css/vendor.css": "/css/vendor.css?id=ebf268d31d154519cd04",
+=======
+    "/js/vendor.js": "/js/vendor.js?id=19fa6f67536a05a1da89",
+    "/js/app.js": "/js/app.js?id=fb4aa0d273cd85eab9d6",
+    "/js/manifest.js": "/js/manifest.js?id=c13241540e70a36d2db2",
+    "/js/ie.js": "/js/ie.js?id=f7a78deadcb6f066abd5",
+    "/css/app.css": "/css/app.css?id=934470b03543b2d5e16c",
+    "/css/vendor.css": "/css/vendor.css?id=147ccc8345a2867d35ee",
+>>>>>>> 50d57f20dd25925739523e5521c31b2374bc9650
     "/fonts/glyphicons-halflings-regular.eot": "/fonts/glyphicons-halflings-regular.eot?id=4bf9b90eff478c1c4644",
     "/fonts/glyphicons-halflings-regular.svg": "/fonts/glyphicons-halflings-regular.svg?id=89889688147bd7575d63",
     "/fonts/glyphicons-halflings-regular.ttf": "/fonts/glyphicons-halflings-regular.ttf?id=2241c2b2fa45de959018",
