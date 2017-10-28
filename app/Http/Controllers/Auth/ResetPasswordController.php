@@ -26,4 +26,16 @@ class ResetPasswordController extends Controller
     {
         $this->middleware('guest');
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    protected function rules()
+    {
+        $rules = parent::rules();
+
+        $rules['password'] = $rules['password'] . '|zxcvbn:3,email';
+
+        return $rules;
+    }
 }
