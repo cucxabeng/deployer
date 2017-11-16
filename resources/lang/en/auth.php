@@ -20,5 +20,6 @@ return [
     'throttle'              => 'Too many login attempts. Please try again in :seconds seconds.',
     'invalid_code'          => 'The authentication code was incorrect.',
     'remember'              => 'Remember Me',
+    'sso'                   => 'SSO',
 
 ];
