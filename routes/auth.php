@@ -15,4 +15,8 @@ $router->group(['namespace' => 'Auth'], function () use ($router) {
     $router->post('password/reset', 'ResetPasswordController@reset');
     $router->post('password/email', 'ForgotPasswordController@sendResetLinkEmail')->name('auth.reset-email');
     $router->get('password/reset/{token}', 'ResetPasswordController@showResetForm')->name('auth.reset-confirm');
+
+    // Teko SSO Auth
+    $router->get('sso', 'LoginController@sso')->name('auth.sso');
+    $router->get('sso/callback', 'LoginController@ssoCallback')->name('auth.sso-callback');
 });

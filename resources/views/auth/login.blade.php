@@ -45,6 +45,10 @@
                     <div class="col-xs-4">
                         <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('auth.sign_in') }}</button>
                     </div>
+
+                    <div class="col-xs-4 pull-right">
+                        <a type="button" href="{{ route('auth.sso') }}" class="btn btn-success btn-block btn-flat">SSO</a>
+                    </div>
                 </div>
             </form>
         </div>

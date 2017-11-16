@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "478c1b226983b3d0b6839e2cb1975bb8",
+    "content-hash": "f5f6f9bd2fb368554e87910432e37a31",
     "packages": [
         {
             "name": "andywer/js-localization",
@@ -1053,6 +1053,7 @@
                 "laravel",
                 "minifier"
             ],
+            "abandoned": "htmlmin/htmlmin",
             "time": "2017-01-01T13:22:51+00:00"
         },
         {
@@ -1449,6 +1450,52 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
+        },
+        {
+            "name": "kitetail/zttp",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/kitetail/zttp.git",
+                "reference": "e788ab8fc5c0259f691e2960d17e0ddbab761c6a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/kitetail/zttp/zipball/e788ab8fc5c0259f691e2960d17e0ddbab761c6a",
+                "reference": "e788ab8fc5c0259f691e2960d17e0ddbab761c6a",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.0",
+                "php": ">=7.0",
+                "tightenco/collect": "^5.4"
+            },
+            "require-dev": {
+                "laravel/lumen-framework": "^5.4",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Zttp.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "description": "A developer-experience focused HTTP client, optimized for most common use cases.",
+            "keywords": [
+                "Guzzle",
+                "http"
+            ],
+            "time": "2017-08-09T15:31:26+00:00"
         },
         {
             "name": "laracademy/interactive-make",

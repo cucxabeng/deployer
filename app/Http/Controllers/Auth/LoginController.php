@@ -10,6 +10,8 @@ use Illuminate\Routing\Redirector;
 use Illuminate\Session\SessionManager; // FIXME: Shouldn't this be a contract?
 use PragmaRX\Google2FA\Contracts\Google2FA;
 use REBELinBLUE\Deployer\Http\Controllers\Controller;
+use REBELinBLUE\Deployer\User;
+use Zttp\Zttp;
 
 /**
  * Controller for handling user login.
@@ -163,5 +165,50 @@ class LoginController extends Controller
 
         return $this->redirect->route('auth.login')
                               ->withError($translator->trans('auth.invalid_code'));
+    }
+
+    /**
+     * Auth with Teko SSO
+     */
+    public function sso()
+    {
+        $url = env('SSO_URL') . '/signin?_cont=' . env('SSO_CALLBACK');
+
+        return redirect()->away($url);
+    }
+
+    /**
+     * SSO callback
+     *
+     * @param Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
+     */
+    public function ssoCallback(Request $request)
+    {
+        try {
+            $ssoToken = ($request->input('_uat')) ? $request->input('_uat') : $_COOKIE['_uat'];
+            $ssoContent = Zttp::get(env('SSO_URL') . '/api/validate_access_token?accessToken=' . $ssoToken);
+
+            if (! $ssoContent->isOk()) {
+                return redirect()->route('auth.login');
+            }
+
+            $teKoUser = $ssoContent->json();
+
+            if ((isset($teKoUser['email']) && $teKoUser['email'])) {
+                $user = User::where('email', $teKoUser['email'])->first();
+
+                if ($user) {
+                    \Auth::login($user, true);
+
+                    return $this->sendLoginResponse($request);
+                }
+            }
+        } catch (\Exception $e) {
+            //
+        }
+
+        return redirect()->route('auth.login');
     }
 }
